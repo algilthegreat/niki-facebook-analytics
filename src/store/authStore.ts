@@ -24,12 +24,12 @@ interface AuthState {
   init: () => () => void
 }
 
-// Demo user for when Firebase is not configured
 const DEMO_USER = {
   uid: 'demo-user-001',
   email: 'demo@niki.app',
   displayName: 'Utilisateur Démo',
   photoURL: null,
+  emailVerified: true,
 } as unknown as User
 
 export const useAuthStore = create<AuthState>((set) => ({
@@ -40,6 +40,11 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   init: () => {
     if (isDemoMode) {
+      // En mode démo, pas de Firebase — on marque juste comme initialisé
+      set({ initialized: true, user: null })
+      return () => {}
+    }
+    if (!auth) {
       set({ initialized: true, user: null })
       return () => {}
     }
@@ -53,22 +58,24 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ loading: true, error: null })
     try {
       if (isDemoMode) {
-        await new Promise((r) => setTimeout(r, 800))
-        set({ user: DEMO_USER, loading: false })
+        await new Promise((r) => setTimeout(r, 600))
+        set({ user: DEMO_USER, loading: false, error: null })
         return
       }
+      if (!auth) throw new Error('Firebase non configuré')
       await signInWithEmailAndPassword(auth, email, password)
       set({ loading: false })
     } catch (err: unknown) {
-      const error = err as { code?: string }
+      const error = err as { code?: string; message?: string }
       const messages: Record<string, string> = {
         'auth/user-not-found': 'Aucun compte avec cet e-mail',
         'auth/wrong-password': 'Mot de passe incorrect',
+        'auth/invalid-credential': 'E-mail ou mot de passe incorrect',
         'auth/too-many-requests': 'Trop de tentatives, réessayez plus tard',
         'auth/invalid-email': 'Adresse e-mail invalide',
       }
       set({
-        error: messages[error.code || ''] || 'Erreur de connexion',
+        error: messages[error.code || ''] || error.message || 'Erreur de connexion',
         loading: false,
       })
     }
@@ -78,10 +85,11 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ loading: true, error: null })
     try {
       if (isDemoMode) {
-        await new Promise((r) => setTimeout(r, 800))
-        set({ user: { ...DEMO_USER, displayName: name } as User, loading: false })
+        await new Promise((r) => setTimeout(r, 600))
+        set({ user: { ...DEMO_USER, displayName: name } as User, loading: false, error: null })
         return
       }
+      if (!auth || !db) throw new Error('Firebase non configuré')
       const { user } = await createUserWithEmailAndPassword(auth, email, password)
       await updateProfile(user, { displayName: name })
       await setDoc(doc(db, 'users', user.uid), {
@@ -92,14 +100,14 @@ export const useAuthStore = create<AuthState>((set) => ({
       })
       set({ loading: false })
     } catch (err: unknown) {
-      const error = err as { code?: string }
+      const error = err as { code?: string; message?: string }
       const messages: Record<string, string> = {
         'auth/email-already-in-use': 'Un compte existe déjà avec cet e-mail',
         'auth/weak-password': 'Mot de passe trop faible',
         'auth/invalid-email': 'Adresse e-mail invalide',
       }
       set({
-        error: messages[error.code || ''] || 'Erreur lors de la création du compte',
+        error: messages[error.code || ''] || error.message || 'Erreur lors de la création du compte',
         loading: false,
       })
     }
@@ -109,10 +117,11 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ loading: true, error: null })
     try {
       if (isDemoMode) {
-        await new Promise((r) => setTimeout(r, 800))
-        set({ user: DEMO_USER, loading: false })
+        await new Promise((r) => setTimeout(r, 600))
+        set({ user: DEMO_USER, loading: false, error: null })
         return
       }
+      if (!auth || !db) throw new Error('Firebase non configuré')
       const result = await signInWithPopup(auth, googleProvider)
       const user = result.user
       const userDoc = await getDoc(doc(db, 'users', user.uid))
@@ -131,7 +140,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 
   logout: async () => {
-    if (isDemoMode) {
+    if (isDemoMode || !auth) {
       set({ user: null })
       return
     }

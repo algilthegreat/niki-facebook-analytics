@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {
   Box,
@@ -23,7 +23,11 @@ import { COLORS } from '../theme/theme'
 export default function Register() {
   const { t } = useTranslation()
   const navigate = useNavigate()
-  const { register, loginWithGoogle, loading, error, clearError } = useAuthStore()
+  const { user, register, loginWithGoogle, loading, error, clearError } = useAuthStore()
+
+  useEffect(() => {
+    if (user) navigate('/dashboard', { replace: true })
+  }, [user, navigate])
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -48,17 +52,11 @@ export default function Register() {
     clearError()
     if (!validate()) return
     await register(email, password, name)
-    if (!useAuthStore.getState().error) {
-      navigate('/dashboard')
-    }
   }
 
   const handleGoogle = async () => {
     clearError()
     await loginWithGoogle()
-    if (!useAuthStore.getState().error) {
-      navigate('/dashboard')
-    }
   }
 
   return (

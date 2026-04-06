@@ -73,6 +73,7 @@ export const useReportsStore = create<ReportsState>((set, get) => ({
         set({ reports: demoReports, loading: false })
         return
       }
+      if (!db) throw new Error('Firebase non configuré')
       const q = query(
         collection(db, 'users', userId, 'reports'),
         orderBy('createdAt', 'desc')
@@ -102,6 +103,7 @@ export const useReportsStore = create<ReportsState>((set, get) => ({
         set({ reports: demoReports })
         return id
       }
+      if (!db) throw new Error('Firebase non configuré')
       const docRef = await addDoc(collection(db, 'users', userId, 'reports'), {
         ...report,
         userId,
@@ -121,6 +123,7 @@ export const useReportsStore = create<ReportsState>((set, get) => ({
         set({ reports: demoReports })
         return
       }
+      if (!db) throw new Error('Firebase non configuré')
       await deleteDoc(doc(db, 'users', userId, 'reports', reportId))
       set({ reports: get().reports.filter((r) => r.id !== reportId) })
     } catch {
