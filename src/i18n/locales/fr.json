@@ -1,0 +1,181 @@
+{
+  "app": {
+    "name": "NIKI",
+    "tagline": "Analysez. Automatisez. Évoluez.",
+    "description": "La plateforme intelligente d'analyse et d'automatisation pour vos pages Facebook"
+  },
+  "nav": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "analyze": "Analyser",
+    "reports": "Rapports",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "profile": "Profil"
+  },
+  "landing": {
+    "hero_title": "Maîtrisez votre",
+    "hero_title_accent": "présence Facebook",
+    "hero_subtitle": "NIKI analyse vos pages Facebook, automatise les actions pertinentes et vous donne des insights détaillés pour faire croître votre audience.",
+    "cta_start": "Commencer gratuitement",
+    "cta_demo": "Voir la démo",
+    "feature_title": "Tout ce dont vous avez besoin",
+    "features": {
+      "analyze": {
+        "title": "Analyse complète",
+        "desc": "Suivez la portée, l'engagement, les followers et les performances de vos publications en temps réel."
+      },
+      "automate": {
+        "title": "Actions automatisées",
+        "desc": "Identifiez les meilleures heures de publication, les contenus performants et obtenez des recommandations personnalisées."
+      },
+      "reports": {
+        "title": "Rapports détaillés",
+        "desc": "Consultez l'historique de votre page avec des rapports visuels et exportables."
+      },
+      "multilang": {
+        "title": "Multilingue",
+        "desc": "Interface disponible en français, anglais et laotien pour tous vos collaborateurs."
+      }
+    },
+    "how_title": "Comment ça marche ?",
+    "steps": {
+      "1": "Créez un compte NIKI",
+      "2": "Connectez votre page Facebook",
+      "3": "Analysez et suivez l'évolution",
+      "4": "Recevez des recommandations automatiques"
+    }
+  },
+  "auth": {
+    "login_title": "Connexion",
+    "login_subtitle": "Accédez à votre tableau de bord NIKI",
+    "register_title": "Créer un compte",
+    "register_subtitle": "Rejoignez NIKI et analysez vos pages Facebook",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "confirm_password": "Confirmer le mot de passe",
+    "name": "Nom complet",
+    "login_btn": "Se connecter",
+    "register_btn": "Créer mon compte",
+    "google_login": "Continuer avec Google",
+    "no_account": "Pas encore de compte ?",
+    "has_account": "Déjà un compte ?",
+    "forgot_password": "Mot de passe oublié ?",
+    "errors": {
+      "email_required": "L'e-mail est requis",
+      "password_required": "Le mot de passe est requis",
+      "password_min": "Au moins 6 caractères",
+      "passwords_match": "Les mots de passe ne correspondent pas",
+      "name_required": "Le nom est requis"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bonjour",
+    "subtitle": "Voici un aperçu de vos analyses",
+    "total_pages": "Pages suivies",
+    "total_reports": "Rapports générés",
+    "total_reach": "Portée totale",
+    "total_engagement": "Engagement moyen",
+    "recent_reports": "Rapports récents",
+    "no_reports": "Aucun rapport pour l'instant",
+    "no_reports_desc": "Analysez votre première page Facebook pour commencer",
+    "analyze_now": "Analyser maintenant",
+    "quick_actions": "Actions rapides",
+    "new_analysis": "Nouvelle analyse",
+    "view_all_reports": "Tous les rapports"
+  },
+  "analyze": {
+    "title": "Analyser une page Facebook",
+    "subtitle": "Entrez l'URL ou l'identifiant de votre page Facebook",
+    "page_input": "URL ou ID de la page (ex: monentreprise)",
+    "connect_facebook": "Connecter Facebook",
+    "connect_desc": "Autorisez NIKI à accéder à vos données de page",
+    "connected": "Connecté",
+    "analyzing": "Analyse en cours...",
+    "analyze_btn": "Analyser",
+    "save_report": "Sauvegarder le rapport",
+    "report_saved": "Rapport sauvegardé !",
+    "demo_mode": "Mode démonstration",
+    "demo_desc": "Les données affichées sont des exemples. Connectez votre compte Facebook pour voir vos vraies données.",
+    "metrics": {
+      "title": "Métriques de la page",
+      "fans": "Abonnés",
+      "reach": "Portée (7j)",
+      "engagement": "Engagement",
+      "posts": "Publications ce mois",
+      "impressions": "Impressions"
+    },
+    "engagement_chart": "Évolution de l'engagement",
+    "reach_chart": "Évolution de la portée",
+    "top_posts": "Meilleures publications",
+    "recommendations": "Recommandations automatiques",
+    "post_columns": {
+      "message": "Publication",
+      "likes": "J'aime",
+      "comments": "Commentaires",
+      "shares": "Partages",
+      "reach": "Portée",
+      "date": "Date"
+    }
+  },
+  "reports": {
+    "title": "Mes rapports",
+    "subtitle": "Historique de toutes vos analyses",
+    "search": "Rechercher...",
+    "filter_date": "Filtrer par date",
+    "no_results": "Aucun rapport trouvé",
+    "delete": "Supprimer",
+    "view": "Voir",
+    "page_name": "Page",
+    "date": "Date",
+    "fans": "Abonnés",
+    "engagement": "Engagement",
+    "reach": "Portée",
+    "confirm_delete": "Supprimer ce rapport ?",
+    "delete_desc": "Cette action est irréversible.",
+    "cancel": "Annuler",
+    "confirm": "Supprimer"
+  },
+  "report_detail": {
+    "title": "Rapport d'analyse",
+    "generated": "Généré le",
+    "back": "Retour aux rapports",
+    "export": "Exporter PDF",
+    "summary": "Résumé",
+    "evolution": "Évolution",
+    "posts_analysis": "Analyse des publications",
+    "insights": "Insights automatiques"
+  },
+  "recommendations": {
+    "best_time": "Meilleure heure de publication",
+    "best_time_desc": "Publiez entre 18h et 21h pour maximiser l'engagement de votre audience.",
+    "content_type": "Type de contenu performant",
+    "content_type_desc": "Les vidéos génèrent 3x plus d'engagement que les images sur votre page.",
+    "frequency": "Fréquence recommandée",
+    "frequency_desc": "Publiez 4 à 5 fois par semaine pour maintenir l'engagement.",
+    "hashtags": "Utilisez des hashtags ciblés",
+    "hashtags_desc": "Les publications avec 3-5 hashtags pertinents ont une portée 40% supérieure.",
+    "engagement_tip": "Répondez aux commentaires",
+    "engagement_tip_desc": "Les pages qui répondent aux commentaires dans l'heure ont un taux d'engagement 2x plus élevé."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "from": "Du",
+    "to": "Au",
+    "days_ago": "il y a {{count}} jours",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier"
+  },
+  "footer": {
+    "tagline": "Analysez votre présence Facebook intelligemment",
+    "rights": "© 2024 NIKI. Tous droits réservés."
+  }
+}

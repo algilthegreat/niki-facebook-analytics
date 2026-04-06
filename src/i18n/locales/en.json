@@ -1,0 +1,181 @@
+{
+  "app": {
+    "name": "NIKI",
+    "tagline": "Analyze. Automate. Grow.",
+    "description": "The smart analytics and automation platform for your Facebook pages"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "analyze": "Analyze",
+    "reports": "Reports",
+    "login": "Login",
+    "register": "Sign Up",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "landing": {
+    "hero_title": "Master your",
+    "hero_title_accent": "Facebook presence",
+    "hero_subtitle": "NIKI analyzes your Facebook pages, automates key actions and delivers detailed insights to grow your audience.",
+    "cta_start": "Get started for free",
+    "cta_demo": "View demo",
+    "feature_title": "Everything you need",
+    "features": {
+      "analyze": {
+        "title": "Full Analytics",
+        "desc": "Track reach, engagement, followers and post performance in real time."
+      },
+      "automate": {
+        "title": "Automated Actions",
+        "desc": "Identify the best posting times, top-performing content and get personalized recommendations."
+      },
+      "reports": {
+        "title": "Detailed Reports",
+        "desc": "Browse your page history with visual, exportable reports."
+      },
+      "multilang": {
+        "title": "Multilingual",
+        "desc": "Interface available in French, English and Lao for all your team members."
+      }
+    },
+    "how_title": "How it works",
+    "steps": {
+      "1": "Create a NIKI account",
+      "2": "Connect your Facebook page",
+      "3": "Analyze and track progress",
+      "4": "Receive automatic recommendations"
+    }
+  },
+  "auth": {
+    "login_title": "Sign In",
+    "login_subtitle": "Access your NIKI dashboard",
+    "register_title": "Create an account",
+    "register_subtitle": "Join NIKI and analyze your Facebook pages",
+    "email": "Email address",
+    "password": "Password",
+    "confirm_password": "Confirm password",
+    "name": "Full name",
+    "login_btn": "Sign In",
+    "register_btn": "Create account",
+    "google_login": "Continue with Google",
+    "no_account": "Don't have an account?",
+    "has_account": "Already have an account?",
+    "forgot_password": "Forgot password?",
+    "errors": {
+      "email_required": "Email is required",
+      "password_required": "Password is required",
+      "password_min": "At least 6 characters",
+      "passwords_match": "Passwords do not match",
+      "name_required": "Name is required"
+    }
+  },
+  "dashboard": {
+    "welcome": "Hello",
+    "subtitle": "Here's an overview of your analytics",
+    "total_pages": "Tracked pages",
+    "total_reports": "Generated reports",
+    "total_reach": "Total reach",
+    "total_engagement": "Average engagement",
+    "recent_reports": "Recent reports",
+    "no_reports": "No reports yet",
+    "no_reports_desc": "Analyze your first Facebook page to get started",
+    "analyze_now": "Analyze now",
+    "quick_actions": "Quick actions",
+    "new_analysis": "New analysis",
+    "view_all_reports": "All reports"
+  },
+  "analyze": {
+    "title": "Analyze a Facebook page",
+    "subtitle": "Enter your Facebook page URL or username",
+    "page_input": "Page URL or ID (e.g. mycompany)",
+    "connect_facebook": "Connect Facebook",
+    "connect_desc": "Authorize NIKI to access your page data",
+    "connected": "Connected",
+    "analyzing": "Analyzing...",
+    "analyze_btn": "Analyze",
+    "save_report": "Save report",
+    "report_saved": "Report saved!",
+    "demo_mode": "Demo mode",
+    "demo_desc": "The data shown is sample data. Connect your Facebook account to see your real data.",
+    "metrics": {
+      "title": "Page metrics",
+      "fans": "Followers",
+      "reach": "Reach (7d)",
+      "engagement": "Engagement",
+      "posts": "Posts this month",
+      "impressions": "Impressions"
+    },
+    "engagement_chart": "Engagement trend",
+    "reach_chart": "Reach trend",
+    "top_posts": "Top posts",
+    "recommendations": "Automatic recommendations",
+    "post_columns": {
+      "message": "Post",
+      "likes": "Likes",
+      "comments": "Comments",
+      "shares": "Shares",
+      "reach": "Reach",
+      "date": "Date"
+    }
+  },
+  "reports": {
+    "title": "My reports",
+    "subtitle": "History of all your analyses",
+    "search": "Search...",
+    "filter_date": "Filter by date",
+    "no_results": "No reports found",
+    "delete": "Delete",
+    "view": "View",
+    "page_name": "Page",
+    "date": "Date",
+    "fans": "Followers",
+    "engagement": "Engagement",
+    "reach": "Reach",
+    "confirm_delete": "Delete this report?",
+    "delete_desc": "This action is irreversible.",
+    "cancel": "Cancel",
+    "confirm": "Delete"
+  },
+  "report_detail": {
+    "title": "Analysis Report",
+    "generated": "Generated on",
+    "back": "Back to reports",
+    "export": "Export PDF",
+    "summary": "Summary",
+    "evolution": "Evolution",
+    "posts_analysis": "Posts analysis",
+    "insights": "Automatic insights"
+  },
+  "recommendations": {
+    "best_time": "Best posting time",
+    "best_time_desc": "Post between 6 PM and 9 PM to maximize engagement from your audience.",
+    "content_type": "Top-performing content",
+    "content_type_desc": "Videos generate 3x more engagement than images on your page.",
+    "frequency": "Recommended frequency",
+    "frequency_desc": "Post 4 to 5 times per week to maintain engagement.",
+    "hashtags": "Use targeted hashtags",
+    "hashtags_desc": "Posts with 3-5 relevant hashtags have 40% higher reach.",
+    "engagement_tip": "Respond to comments",
+    "engagement_tip_desc": "Pages that respond to comments within an hour have 2x higher engagement rates."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "from": "From",
+    "to": "To",
+    "days_ago": "{{count}} days ago",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  },
+  "footer": {
+    "tagline": "Analyze your Facebook presence intelligently",
+    "rights": "© 2024 NIKI. All rights reserved."
+  }
+}
